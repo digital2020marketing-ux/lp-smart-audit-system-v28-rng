@@ -67,38 +67,38 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = () => {
   };
 
   return (
-    <section id="testimoni" className="py-8 sm:py-12 bg-slate-100/90 border-b border-gray-200">
-      <div className="max-w-3xl mx-auto px-3.5 sm:px-6">
+    <section id="testimoni" className="py-10 sm:py-16 bg-slate-100/90 border-b border-gray-200">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6">
         
         {/* Headline */}
-        <div className="text-center max-w-xl mx-auto mb-6 sm:mb-8">
-          <div className="inline-flex items-center gap-1.5 bg-emerald-100 border border-emerald-300 text-emerald-900 px-3 py-0.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-2">
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
+        <div className="text-center max-w-xl mx-auto mb-8 sm:mb-10">
+          <div className="inline-flex items-center gap-1.5 bg-emerald-100 border border-emerald-300 text-emerald-900 px-3.5 py-1 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider mb-2.5">
+            <CheckCircle2 className="w-4 h-4 text-emerald-700" />
             <span>PENGALAMAN PENGGUNA NYATA</span>
           </div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-gray-900 leading-snug px-1">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 leading-snug px-1">
             Apa Kata Pengguna SMART Audit SYSTEM?
           </h2>
-          <p className="text-xs text-gray-600 mt-1 leading-relaxed">
+          <p className="text-sm sm:text-base text-gray-700 mt-2 leading-relaxed">
             Tangkapan layar asli pengalaman rekan-rekan auditor internal:
           </p>
         </div>
 
         {/* 3 Testimonial Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 mb-8">
           {TOP_3_TESTIMONIALS.map((item) => (
             <div
               key={item.id}
               className="bg-white rounded-2xl border border-gray-200 shadow-xs overflow-hidden flex flex-col justify-between"
             >
               {/* Proof Badge */}
-              <div className="px-3.5 py-1.5 bg-slate-50 border-b border-gray-100 text-[11px] sm:text-xs font-bold text-blue-900 flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block" />
+              <div className="px-4 py-2 bg-slate-50 border-b border-gray-100 text-xs sm:text-sm font-bold text-blue-900 flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block" />
                 <span>{item.proofType}</span>
               </div>
 
               {/* Image Preview */}
-              <div className="p-2.5 bg-slate-900/5 flex items-center justify-center border-b border-gray-100 min-h-[170px]">
+              <div className="p-3 bg-slate-900/5 flex items-center justify-center border-b border-gray-100 min-h-[180px]">
                 <picture className="w-full flex justify-center">
                   <source srcSet={item.imageWebp} type="image/webp" />
                   <img
@@ -108,7 +108,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = () => {
                     alt={item.title}
                     width={400}
                     height={500}
-                    className="w-full h-auto max-h-[250px] object-contain rounded-lg block shadow-xs"
+                    className="w-full h-auto max-h-[260px] object-contain rounded-lg block shadow-xs"
                     loading="lazy"
                     decoding="async"
                   />
@@ -116,9 +116,9 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = () => {
               </div>
 
               {/* Quote */}
-              <div className="p-3.5 bg-white flex items-start gap-2">
-                <Quote className="w-3.5 h-3.5 text-blue-800 shrink-0 mt-0.5" />
-                <p className="text-xs text-gray-700 font-medium leading-relaxed italic">
+              <div className="p-4 bg-white flex items-start gap-2.5">
+                <Quote className="w-4 h-4 text-blue-800 shrink-0 mt-0.5" />
+                <p className="text-xs sm:text-sm text-gray-800 font-medium leading-relaxed italic">
                   {item.quote}
                 </p>
               </div>
@@ -127,20 +127,20 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = () => {
         </div>
 
         {/* CTA Button After Testimonials */}
-        <div className="text-center max-w-sm sm:max-w-md mx-auto space-y-2">
+        <div className="text-center max-w-sm sm:max-w-md mx-auto space-y-2.5">
           <a
             id="testi-cta-buy"
             href={getCheckoutUrl()}
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleCtaClick}
-            className="w-full inline-flex items-center justify-center gap-2 px-4 py-3.5 bg-gradient-to-r from-red-600 to-rose-700 hover:from-red-700 text-white rounded-2xl font-black text-sm sm:text-base shadow-lg shadow-red-600/25 transition-all cursor-pointer min-h-[48px]"
+            className="w-full inline-flex items-center justify-center gap-2 px-5 py-4 bg-gradient-to-r from-red-600 to-rose-700 hover:from-red-700 active:scale-[0.98] text-white rounded-2xl font-black text-base sm:text-lg shadow-lg shadow-red-600/25 transition-all cursor-pointer min-h-[50px]"
           >
-            <ShoppingBag className="w-4 h-4 shrink-0" />
+            <ShoppingBag className="w-5 h-5 shrink-0" />
             <span>Dapatkan Promo Rp197.000</span>
-            <ArrowRight className="w-4 h-4 shrink-0" />
+            <ArrowRight className="w-5 h-5 shrink-0" />
           </a>
-          <p className="text-[11px] text-gray-500 font-semibold leading-normal">
+          <p className="text-xs sm:text-sm text-gray-600 font-semibold leading-normal">
             Promo Rp197.000 hanya 3 hari • Selanjutnya naik ke Rp249.000 • Akses seumur hidup
           </p>
         </div>

@@ -10,7 +10,6 @@ import { ComparisonSection } from './components/ComparisonSection';
 import { PricingOffer } from './components/PricingOffer';
 import { GuaranteeAndFaqSection } from './components/GuaranteeAndFaqSection';
 import { Footer } from './components/Footer';
-import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 export default function App() {
   const handleCheckoutScroll = () => {
@@ -26,7 +25,7 @@ export default function App() {
       <Navbar onCheckoutClick={handleCheckoutScroll} />
 
       {/* Main Content: Streamlined Mobile-First Sales Page */}
-      <main className="flex-1 pb-20 sm:pb-0 w-full overflow-x-hidden">
+      <main className="flex-1 w-full overflow-x-hidden">
         {/* 1. BAGIAN PEMBUKA (HERO) */}
         <Hero onCheckoutClick={handleCheckoutScroll} />
 
@@ -55,9 +54,8 @@ export default function App() {
         <GuaranteeAndFaqSection />
       </main>
 
-      {/* Footer & Mobile Sticky Bar */}
+      {/* Footer with single Kontak CS button at the very bottom */}
       <Footer />
-      <FloatingWhatsApp />
     </div>
   );
 }
